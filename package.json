@@ -1,0 +1,21 @@
+{
+  "name": "learncypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  
+  "dependencies": {
+    "cypress": "^6.2.1"
+  },
+  "devDependencies": {
+    "cypress": "^6.2.1",
+    "mocha": "^8.2.1",
+    "mochawesome": "^6.2.1"
+  },
+  "scripts": {
+    "Headless": "node_modules\\.bin\\cypress run --spec \"cypress\\integration\\examples\\Framework.js",
+    "chromerun":"node_modules\\.bin\\cypress run --spec \"cypress\\integration\\examples\\Framework.js\" --browser chrome --no-exit"
+  },
+  "author": "",
+  "license": "ISC"
+}
