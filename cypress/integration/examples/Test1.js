@@ -21,6 +21,7 @@ describe('This is First Test Suite',()=>{
         cy.get("@products").find(".product").each(($el,index,$list)=>{
             const buttonToSelect = $el.find('h4.product-name').text()
             cy.log(buttonToSelect)
+            
             if(buttonToSelect.includes('Cashews')){
                 $el.find('button').click()
             }

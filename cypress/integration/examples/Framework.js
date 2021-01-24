@@ -2,6 +2,8 @@
 
 import HomePage from "../PageObjects/HomePage"
 import ProductsPage from "../PageObjects/ProductsPage"
+//import AmazonHomePage from "../PageObjects/AmazonHomePage"
+import AmazonMainPage from "../PageObjects/AmazonMainPage"
 
 describe('This is First Test Suite',function(){
      beforeEach(function() {
@@ -12,7 +14,7 @@ describe('This is First Test Suite',function(){
       })
 
 
-    it.skip("Test Case - 1 ",function(){
+    it("Test Case - 1 ",function(){
         cy.visit("https://rahulshettyacademy.com/angularpractice/")
 
         cy.get("input[name='name']:nth-child(2)").type(this.data.name)
@@ -27,13 +29,12 @@ describe('This is First Test Suite',function(){
 
         this.data.productName.forEach(function(element){
           cy.addProduct(element)
-
         })
 
     })
     
 
-    it("Test Case - POM Model ",function(){
+    it.skip("Test Case - POM Model ",function(){
 
        const homePage = new HomePage()
        const productPage = new ProductsPage()
@@ -58,6 +59,20 @@ describe('This is First Test Suite',function(){
       // cy.get('.alert').should("have.value","Success!  Thank you! Your order will be delivered in next few weeks :-).")
 
   })
+
+  
+  it("Test Case - Amazon Login ",function(){
+    // amazonHome.LoginToamazon()
+    // amazonHome.enterEmail("m.muralimohan@live.in")
+    // amazonHome.clickContinue()
+    const amazonMainPage  = new AmazonMainPage()
+    cy.LoginToAmazon("m.muralimohan@live.in","Infosys1$")
+    amazonMainPage.searchContentAndSelect("Samsung","samsung s20")
+    amazonMainPage.searchContentAndSelect("IPhone x","IPhone x")
+  
+   
+
+})
 
 
 })

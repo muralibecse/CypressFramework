@@ -14,7 +14,10 @@
   },
   "scripts": {
     "Headless": "node_modules\\.bin\\cypress run --spec \"cypress\\integration\\examples\\Framework.js",
-    "chromerun":"node_modules\\.bin\\cypress run --spec \"cypress\\integration\\examples\\Framework.js\" --browser chrome --no-exit"
+    "chromerun":"node_modules\\.bin\\cypress run --spec \"cypress\\integration\\examples\\Framework.js\" --browser chrome --no-exit",
+    "chromerun_dashboard_parallel":"node_modules\\.bin\\cypress run --spec \"cypress\\integration\\examples\\Framework.js\" --browser chrome --record  --key av52v6"
+
+  
   },
   "author": "",
   "license": "ISC"

@@ -10,6 +10,9 @@
 //
 //
 // -- This is a parent command --
+
+import AmazonHomePage from "../integration/PageObjects/AmazonHomePage"
+
 // Cypress.Commands.add("login", (email, password) => { ... })
 Cypress.Commands.add("addProduct", (productName) => { 
     cy.get('h4.card-title').each(($el,index,$list)=>{
@@ -18,6 +21,17 @@ Cypress.Commands.add("addProduct", (productName) => {
             cy.get('button.btn.btn-info').eq(index).click()
         }
       })
+})
+
+
+Cypress.Commands.add("LoginToAmazon",(username,password)=>{
+    const amazonPage = new AmazonHomePage()
+    amazonPage.visitAmazonHomePage("https://amazon.in")
+    amazonPage.LoginToamazon()
+    amazonPage.enterEmail(username)
+    amazonPage.clickContinue()
+    amazonPage.enterPassword(password)
+    amazonPage.clickLogin()
 })
 
 
