@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 1,
     "failures": -1,
-    "start": "2021-01-24T12:32:13.438Z",
-    "end": "2021-01-24T12:33:11.062Z",
-    "duration": 57624,
+    "start": "2021-01-24T17:42:29.254Z",
+    "end": "2021-01-24T17:43:04.954Z",
+    "duration": 35700,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 33.33333333333333,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "09bb36ea-820b-4c87-a21c-8c8f85deac60",
+      "uuid": "f35375d8-71ce-4945-bc34-91d5297f9ea7",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\Framework.js",
       "file": "cypress\\integration\\examples\\Framework.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bfc9c867-b512-406a-ae46-08518138f026",
+          "uuid": "02ab37ea-455d-430a-aa1e-68326cc95a99",
           "title": "This is First Test Suite",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Test Case - 1 ",
               "fullTitle": "This is First Test Suite Test Case - 1 ",
               "timedOut": null,
-              "duration": 16544,
+              "duration": 7983,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(\"https://rahulshettyacademy.com/angularpractice/\");\ncy.get(\"input[name='name']:nth-child(2)\").type(this.data.name);\ncy.get(\"#exampleFormControlSelect1\").select(this.data.gender);\ncy.get(\"input[name='name']:nth-child(1)\").should('have.value', this.data.name);\ncy.screenshot();\ncy.get(\"input[name='name']:nth-child(2)\").should('have.attr', \"minLength\", 2);\ncy.screenshot();\ncy.get('a:contains(\"Shop\")').click({\n  force: true\n}); // cy.addProduct(\"Blackberry\")\n// cy.addProduct(\"Nokia Edge\")\nthis.data.productName.forEach(function (element) {\n  cy.addProduct(element);\n});",
               "err": {},
-              "uuid": "423c59b2-548c-49e6-8566-39b6041c9495",
-              "parentUUID": "bfc9c867-b512-406a-ae46-08518138f026",
+              "uuid": "d6b2d853-3b0b-4ddf-8bc9-54e97dbff4b0",
+              "parentUUID": "02ab37ea-455d-430a-aa1e-68326cc95a99",
               "isHook": false,
               "skipped": false
             },
@@ -65,8 +65,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "4eafd684-e473-4068-9f8d-c99313ec09bb",
-              "parentUUID": "bfc9c867-b512-406a-ae46-08518138f026",
+              "uuid": "4a79959f-21c0-434f-9579-83c7da3f972a",
+              "parentUUID": "02ab37ea-455d-430a-aa1e-68326cc95a99",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Test Case - Amazon Login ",
               "fullTitle": "This is First Test Suite Test Case - Amazon Login ",
               "timedOut": null,
-              "duration": 28911,
+              "duration": 21259,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,23 +83,23 @@
               "context": null,
               "code": "// amazonHome.LoginToamazon()\n// amazonHome.enterEmail(\"m.muralimohan@live.in\")\n// amazonHome.clickContinue()\nvar amazonMainPage = new _AmazonMainPage[\"default\"]();\ncy.LoginToAmazon(\"m.muralimohan@live.in\", \"Infosys1$\");\namazonMainPage.searchContentAndSelect(\"Samsung\", \"samsung s20\");\namazonMainPage.searchContentAndSelect(\"IPhone x\", \"IPhone x\");",
               "err": {},
-              "uuid": "2e1bba1d-624c-4b08-a98c-ec6aed854bee",
-              "parentUUID": "bfc9c867-b512-406a-ae46-08518138f026",
+              "uuid": "14dbcca5-9149-4a08-a50a-3234e9448cdb",
+              "parentUUID": "02ab37ea-455d-430a-aa1e-68326cc95a99",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "423c59b2-548c-49e6-8566-39b6041c9495",
-            "2e1bba1d-624c-4b08-a98c-ec6aed854bee"
+            "d6b2d853-3b0b-4ddf-8bc9-54e97dbff4b0",
+            "14dbcca5-9149-4a08-a50a-3234e9448cdb"
           ],
           "failures": [],
           "pending": [
-            "4eafd684-e473-4068-9f8d-c99313ec09bb"
+            "4a79959f-21c0-434f-9579-83c7da3f972a"
           ],
           "skipped": [],
-          "duration": 45455,
+          "duration": 29242,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -1,6 +1,6 @@
 import BasePage from "../PageObjects/BasePage"
 class AmazonHomePage {
-
+   
     visitAmazonHomePage(url){{
         return cy.visit(url);
     }}

@@ -1,6 +1,9 @@
+import BasePage from "../PageObjects/BasePage"
 export default class AmazonMainPage{
 
     searchContentAndSelect(searchContent,contentTOselect){
+        // const bPage = new BasePage()
+        // bPage.type('#twotabsearchtextbox')
         cy.get('#twotabsearchtextbox').type(searchContent).should('have.value',searchContent)
         cy.get('#suggestions div').each(($el,index,$list)=>{
             cy.log($el.text())

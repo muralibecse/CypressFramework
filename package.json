@@ -3,22 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
-  "dependencies": {
-    "cypress": "^6.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "cypress": "^6.2.1",
+    "cypress": "^6.3.0",
     "mocha": "^8.2.1",
-    "mochawesome": "^6.2.1"
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
   },
   "scripts": {
-    "Headless": "node_modules\\.bin\\cypress run --spec \"cypress\\integration\\examples\\Framework.js",
-    "chromerun":"node_modules\\.bin\\cypress run --spec \"cypress\\integration\\examples\\Framework.js\" --browser chrome --no-exit",
-    "chromerun_dashboard_parallel":"node_modules\\.bin\\cypress run --spec \"cypress\\integration\\examples\\Framework.js\" --browser chrome --record  --key av52v6"
-
-  
+    "test": "node_modules\\.bin\\cypress run",
+    "Headless": "npm run test --spec \"cypress\\integration\\examples\\Framework.js",
+    "chromerun": "npm run test --spec \"cypress\\integration\\examples\\Framework.js\" --browser chrome --no-exit",
+    "chromerun_dashboard_parallel": "npm run test --spec \"cypress\\integration\\examples\\Framework.js\" --browser chrome --record --key f8bb6539-2ce8-4a54-ae3f-6302241e246b --parallel"
   },
-  "author": "",
+  "author": "Muralimohan Murugesan",
   "license": "ISC"
 }
