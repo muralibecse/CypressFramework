@@ -1,8 +1,9 @@
-// import AmazonHomePage from "../PageObjects/AmazonHomePage"
-// import AmazonMainPage from "../PageObjects/AmazonMainPage"
+import AmazonHomePage from "../PageObjects/AmazonHomePage"
+import AmazonMainPage from "../PageObjects/AmazonMainPage"
 
  export default class BasePage{
 
+    
 
     type(object,text){
             cy.get(object).as("object")

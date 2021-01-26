@@ -1,6 +1,10 @@
 import BasePage from "../PageObjects/BasePage"
 export default class AmazonMainPage{
 
+    constructor(){
+        
+    }
+
     searchContentAndSelect(searchContent,contentTOselect){
         // const bPage = new BasePage()
         // bPage.type('#twotabsearchtextbox')
@@ -12,7 +16,6 @@ export default class AmazonMainPage{
                 cy.get('#twotabsearchtextbox').should('have.value',contentTOselect)
                 cy.wait(1000)
                 cy.get("#twotabsearchtextbox").clear().should('have.value','')
-               
             }
         })
 

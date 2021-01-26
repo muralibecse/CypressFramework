@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 2,
-    "passes": 2,
+    "passes": 1,
     "pending": 1,
-    "failures": -1,
-    "start": "2021-01-24T17:42:29.254Z",
-    "end": "2021-01-24T17:43:04.954Z",
-    "duration": 35700,
+    "failures": 0,
+    "start": "2021-01-26T18:15:23.846Z",
+    "end": "2021-01-26T18:16:09.375Z",
+    "duration": 45529,
     "testsRegistered": 3,
-    "passPercent": 100,
+    "passPercent": 50,
     "pendingPercent": 33.33333333333333,
     "other": 1,
     "hasOther": true,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "f35375d8-71ce-4945-bc34-91d5297f9ea7",
+      "uuid": "de737899-a9e5-4d63-944e-1948a1958563",
       "title": "",
-      "fullFile": "cypress\\integration\\examples\\Framework.js",
-      "file": "cypress\\integration\\examples\\Framework.js",
+      "fullFile": "cypress\\integration\\DemoSpecs\\Framework.spec.js",
+      "file": "cypress\\integration\\DemoSpecs\\Framework.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "02ab37ea-455d-430a-aa1e-68326cc95a99",
+          "uuid": "5c1131f3-f8e1-4444-950a-34e12ce8e328",
           "title": "This is First Test Suite",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Test Case - 1 ",
               "fullTitle": "This is First Test Suite Test Case - 1 ",
               "timedOut": null,
-              "duration": 7983,
+              "duration": 8864,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(\"https://rahulshettyacademy.com/angularpractice/\");\ncy.get(\"input[name='name']:nth-child(2)\").type(this.data.name);\ncy.get(\"#exampleFormControlSelect1\").select(this.data.gender);\ncy.get(\"input[name='name']:nth-child(1)\").should('have.value', this.data.name);\ncy.screenshot();\ncy.get(\"input[name='name']:nth-child(2)\").should('have.attr', \"minLength\", 2);\ncy.screenshot();\ncy.get('a:contains(\"Shop\")').click({\n  force: true\n}); // cy.addProduct(\"Blackberry\")\n// cy.addProduct(\"Nokia Edge\")\nthis.data.productName.forEach(function (element) {\n  cy.addProduct(element);\n});",
               "err": {},
-              "uuid": "d6b2d853-3b0b-4ddf-8bc9-54e97dbff4b0",
-              "parentUUID": "02ab37ea-455d-430a-aa1e-68326cc95a99",
+              "uuid": "37ca7ed4-3e14-42d2-8295-ea16fc324c49",
+              "parentUUID": "5c1131f3-f8e1-4444-950a-34e12ce8e328",
               "isHook": false,
               "skipped": false
             },
@@ -65,8 +65,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "4a79959f-21c0-434f-9579-83c7da3f972a",
-              "parentUUID": "02ab37ea-455d-430a-aa1e-68326cc95a99",
+              "uuid": "507bda12-1eb7-4a0a-9f5d-39aab8a97425",
+              "parentUUID": "5c1131f3-f8e1-4444-950a-34e12ce8e328",
               "isHook": false,
               "skipped": false
             },
@@ -74,32 +74,37 @@
               "title": "Test Case - Amazon Login ",
               "fullTitle": "This is First Test Suite Test Case - Amazon Login ",
               "timedOut": null,
-              "duration": 21259,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 30144,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "// amazonHome.LoginToamazon()\n// amazonHome.enterEmail(\"m.muralimohan@live.in\")\n// amazonHome.clickContinue()\nvar amazonMainPage = new _AmazonMainPage[\"default\"]();\ncy.LoginToAmazon(\"m.muralimohan@live.in\", \"Infosys1$\");\namazonMainPage.searchContentAndSelect(\"Samsung\", \"samsung s20\");\namazonMainPage.searchContentAndSelect(\"IPhone x\", \"IPhone x\");",
-              "err": {},
-              "uuid": "14dbcca5-9149-4a08-a50a-3234e9448cdb",
-              "parentUUID": "02ab37ea-455d-430a-aa1e-68326cc95a99",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10130ms: expected '<input#twotabsearchtextbox.nav-input.nav-progressive-attribute>' to have value 'IPhone x', but the value was 'SamsungIPhone x'",
+                "estack": "AssertionError: Timed out retrying after 10130ms: expected '<input#twotabsearchtextbox.nav-input.nav-progressive-attribute>' to have value 'IPhone x', but the value was 'SamsungIPhone x'\n    at AmazonMainPage.searchContentAndSelect (https://www.amazon.in/__cypress/tests?p=cypress\\integration\\DemoSpecs\\Framework.spec.js:334:58)\n    at Context.eval (https://www.amazon.in/__cypress/tests?p=cypress\\integration\\DemoSpecs\\Framework.spec.js:225:20)",
+                "diff": "- 'SamsungIPhone x'\n+ 'IPhone x'\n"
+              },
+              "uuid": "666a0dea-89cd-4ccb-916b-0dabd2d3ae59",
+              "parentUUID": "5c1131f3-f8e1-4444-950a-34e12ce8e328",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d6b2d853-3b0b-4ddf-8bc9-54e97dbff4b0",
-            "14dbcca5-9149-4a08-a50a-3234e9448cdb"
+            "37ca7ed4-3e14-42d2-8295-ea16fc324c49"
           ],
-          "failures": [],
+          "failures": [
+            "666a0dea-89cd-4ccb-916b-0dabd2d3ae59"
+          ],
           "pending": [
-            "4a79959f-21c0-434f-9579-83c7da3f972a"
+            "507bda12-1eb7-4a0a-9f5d-39aab8a97425"
           ],
           "skipped": [],
-          "duration": 29242,
+          "duration": 39008,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -122,7 +127,7 @@
     "mochawesome": {
       "options": {
         "quiet": false,
-        "reportFilename": "mochawesome",
+        "reportFilename": "report",
         "saveHtml": true,
         "saveJson": true,
         "consoleReporter": "spec",
@@ -132,7 +137,15 @@
       "version": "6.2.1"
     },
     "marge": {
-      "options": null,
+      "options": {
+        "reportdir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
       "version": "5.1.0"
     }
   }

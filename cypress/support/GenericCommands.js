@@ -25,12 +25,4 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 
-Cypress.Commands.add("typetext",function(object,contentToType){
-
-    cy.get(object).then(($object)=>{
-
-    })
-
-})
-
 

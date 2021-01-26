@@ -1,0 +1,25 @@
+{
+  "name": "learncypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^6.3.0",
+    "cypress-xpath": "^1.6.1",
+    "mocha": "^8.2.1",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
+  },
+  "scripts": {
+    // "test": "node_modules\\.bin\\cypress run",
+    // "Headless": "npm run test --spec \"cypress\\integration\\examples\\Framework.js",
+    // "chromerun": "npm run test --spec \"cypress\\integration\\examples\\Framework.js\" --browser chrome --no-exit",
+    // "chromerun_dashboard_parallel": "npm run test --spec \"cypress\\integration\\examples\\Framework.js\" --browser chrome --record --key f8bb6539-2ce8-4a54-ae3f-6302241e246b --parallel",
+    // "demo_specs":".\\node_modules\\.bin\\cypress run --spec \"cypress\\integration\\DemoSpecs\\*.js\" --reporter mochawesome" 
+    
+  },
+  "author": "Muralimohan Murugesan",
+  "license": "ISC"
+}

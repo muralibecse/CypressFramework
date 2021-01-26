@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-01-26T17:57:09.044Z",
+    "end": "2021-01-26T17:57:09.547Z",
+    "duration": 503,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "136a8c42-b886-44fd-96a5-951d277c44c9",
+      "title": "",
+      "fullFile": "cypress\\integration\\DemoSpecs\\istockPhotoSearch.spec.js",
+      "file": "cypress\\integration\\DemoSpecs\\istockPhotoSearch.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5671a5e8-3e9d-4ee4-89d0-b569e239c529",
+          "title": "iStockPhoto_Scenario_1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search content in istockPhoto",
+              "fullTitle": "iStockPhoto_Scenario_1 Search content in istockPhoto",
+              "timedOut": null,
+              "duration": 469,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(\"\");",
+              "err": {
+                "message": "SyntaxError: Failed to execute 'evaluate' on 'Document': The string '' is not a valid XPath expression.",
+                "estack": "SyntaxError: Failed to execute 'evaluate' on 'Document': The string '' is not a valid XPath expression.\nError: Failed to execute 'evaluate' on 'Document': The string '' is not a valid XPath expression.",
+                "diff": null
+              },
+              "uuid": "fd85741d-81a6-4a0f-93fc-4360d117ad26",
+              "parentUUID": "5671a5e8-3e9d-4ee4-89d0-b569e239c529",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "fd85741d-81a6-4a0f-93fc-4360d117ad26"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 469,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportdir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

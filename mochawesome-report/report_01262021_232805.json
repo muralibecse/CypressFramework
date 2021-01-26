@@ -1,0 +1,93 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-01-26T17:58:04.966Z",
+    "end": "2021-01-26T17:58:05.787Z",
+    "duration": 821,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1959fa84-2fc6-48dc-a710-8174c29989f6",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\cypress.js",
+      "file": "cypress\\integration\\examples\\cypress.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 635,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > process is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > process is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at Object../node_modules/ci-info/index.js (http://localhost:65388/__cypress/tests?p=cypress\\integration\\examples\\cypress.js:74856:11)\n    at __webpack_require__ (http://localhost:65388/__cypress/tests?p=cypress\\integration\\examples\\cypress.js:20:30)\n    at Object../node_modules/is-ci/index.js (http://localhost:65388/__cypress/tests?p=cypress\\integration\\examples\\cypress.js:101178:18)\n    at __webpack_require__ (http://localhost:65388/__cypress/tests?p=cypress\\integration\\examples\\cypress.js:20:30)\n    at Object.eval (http://localhost:65388/__cypress/tests?p=cypress\\integration\\examples\\cypress.js:86164:14)\n    at Object../node_modules/cypress/lib/util.js (http://localhost:65388/__cypress/tests?p=cypress\\integration\\examples\\cypress.js:86640:30)\n    at __webpack_require__ (http://localhost:65388/__cypress/tests?p=cypress\\integration\\examples\\cypress.js:20:30)\n    at Object.eval (http://localhost:65388/__cypress/tests?p=cypress\\integration\\examples\\cypress.js:82355:14)\n    at Object../node_modules/cypress/index.js (http://localhost:65388/__cypress/tests?p=cypress\\integration\\examples\\cypress.js:82384:30)\n    at __webpack_require__ (http://localhost:65388/__cypress/tests?p=cypress\\integration\\examples\\cypress.js:20:30)",
+            "diff": null
+          },
+          "uuid": "e56038db-b318-424d-91f4-d308aa8554ee",
+          "parentUUID": "1959fa84-2fc6-48dc-a710-8174c29989f6",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "e56038db-b318-424d-91f4-d308aa8554ee"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 635,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportdir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

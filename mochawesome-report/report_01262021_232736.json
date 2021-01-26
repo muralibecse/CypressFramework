@@ -1,0 +1,170 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-01-26T17:57:12.918Z",
+    "end": "2021-01-26T17:57:36.016Z",
+    "duration": 23098,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "da053e22-631b-4347-a345-39cb5f385ce9",
+      "title": "",
+      "fullFile": "cypress\\integration\\DemoSpecs\\Mouseactions.spec.js",
+      "file": "cypress\\integration\\DemoSpecs\\Mouseactions.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "26ec3c5e-3194-4ac3-92ab-20780eaf4ddc",
+          "title": "Mouse acions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Right click",
+              "fullTitle": "Mouse acions Right click",
+              "timedOut": null,
+              "duration": 5558,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//right click\ncy.visit('http://demo.guru99.com/test/simple_context_menu.html', {\n  retryOnNetworkFailure: true,\n  timeout: 30000\n});\ncy.contains('right click me').rightclick();",
+              "err": {},
+              "uuid": "febd9713-b5a1-4c6d-b508-f1ecfcd5a9e2",
+              "parentUUID": "26ec3c5e-3194-4ac3-92ab-20780eaf4ddc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Double click",
+              "fullTitle": "Mouse acions Double click",
+              "timedOut": null,
+              "duration": 2259,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://demo.guru99.com/test/simple_context_menu.html', {\n  retryOnNetworkFailure: true\n});\ncy.contains('Double-Click Me To See Alert').dblclick();",
+              "err": {},
+              "uuid": "69068726-2786-463d-b962-8e27d3f05e56",
+              "parentUUID": "26ec3c5e-3194-4ac3-92ab-20780eaf4ddc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mouse over",
+              "fullTitle": "Mouse acions Mouse over",
+              "timedOut": null,
+              "duration": 6145,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.amazon.in', {\n  retryOnNetworkFailure: true\n});\ncy.get('#nav-link-accountList').trigger('mouseover');",
+              "err": {},
+              "uuid": "82107ec3-c4ba-4fe4-9433-23a08eb9338f",
+              "parentUUID": "26ec3c5e-3194-4ac3-92ab-20780eaf4ddc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Drag and Drop",
+              "fullTitle": "Mouse acions Drag and Drop",
+              "timedOut": null,
+              "duration": 1054,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.seleniumeasy.com/test/drag-and-drop-demo.html', {\n  timeout: 30000,\n  retryOnNetworkFailure: true\n});\ncy.contains('Draggable 1').drag('#mydropzone');\ncy.contains('Draggable 2').drag('#mydropzone');\ncy.contains('Draggable 3').drag('#mydropzone');\ncy.contains('Draggable 4').drag('#mydropzone');",
+              "err": {
+                "message": "TypeError: cy.contains(...).drag is not a function",
+                "estack": "TypeError: cy.contains(...).drag is not a function\n    at Context.eval (https://www.amazon.in/__cypress/tests?p=cypress\\integration\\DemoSpecs\\Mouseactions.spec.js:128:32)",
+                "diff": null
+              },
+              "uuid": "194ae5e0-81af-43b5-b5d4-41c4434b2b52",
+              "parentUUID": "26ec3c5e-3194-4ac3-92ab-20780eaf4ddc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "febd9713-b5a1-4c6d-b508-f1ecfcd5a9e2",
+            "69068726-2786-463d-b962-8e27d3f05e56",
+            "82107ec3-c4ba-4fe4-9433-23a08eb9338f"
+          ],
+          "failures": [
+            "194ae5e0-81af-43b5-b5d4-41c4434b2b52"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 15016,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportdir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

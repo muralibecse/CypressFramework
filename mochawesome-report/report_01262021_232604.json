@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-01-26T17:55:48.418Z",
+    "end": "2021-01-26T17:56:04.267Z",
+    "duration": 15849,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7a1c2a5e-c56a-420b-bcbf-29e94f26c8d3",
+      "title": "",
+      "fullFile": "cypress\\integration\\DemoSpecs\\Actions.spec.js",
+      "file": "cypress\\integration\\DemoSpecs\\Actions.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "51ea49ff-b576-4d22-b04e-20e6e0b87f69",
+          "title": "To check basic actions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Write basic actions",
+              "fullTitle": "To check basic actions Write basic actions",
+              "timedOut": null,
+              "duration": 12942,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//launch site\ncy.visit('https://www.rahulshettyacademy.com/AutomationPractice/'); //title assertion\ncy.title().should('include', 'Practice Page'); //radio button\ncy.get('input[value=\"radio2\"]').click(); //check box\ncy.get('input[value=\"option3\"]').click(); //static dropdown\ncy.get('#dropdown-class-example').select('Option1').should('have.value', 'option1'); //auto-suggestive dropdown\ncy.get('#autocomplete').click();\ncy.get('#autocomplete').type('Australia');\ncy.get('#autocomplete').type('{downarrow}');\ncy.get('#autocomplete').type('{enter}'); //alert\ncy.get('input[id=\"alertbtn\"]').click(); //alert message assert\ncy.on('window:alert', function (message) {\n  expect(message).to.equal('Hello , share this practice page and share your knowledge');\n}); //navigate forward\ncy.get('.blinkingText').click();\ncy.go('forward');\ncy.title().should('include', 'Rahul Shetty Academy'); //navigate backward\ncy.go('back');\ncy.title().should('include', 'Practice Page'); //table - element at any part of the table\ncy.get('table[name=\"courses\"]').contains('td', 'Write effective QA Resume that will turn to interview call').should('be.visible'); //table - elemnt from a specific location\ncy.get('table[name=\"courses\"] > tbody > tr:nth-child(11) > td:nth-child(2)').contains('Write effective QA Resume that will turn to interview call').should('be.visible'); //table - get element by iterating a column\ncy.get('table[name=\"courses\"] > tbody > tr > td:nth-child(2)').each(function ($e, index, $list) {\n  var text = $e.text();\n  if (text.includes(\"Write effective QA Resume that will turn to interview call\")) {\n    cy.get('table[name=\"courses\"] > tbody > tr > td:nth-child(3)').eq(index).then(function (price) {\n      var rate = price.text();\n      expect(rate).to.equals(\"0\");\n    });\n  }\n}); //mouse actions\n//scroll down for an element\ncy.get('div[class=\"col-sm-8 right-align\"]').scrollIntoView(); //scroll up for an element\ncy.get('img[class=\"logoClass\"]').scrollIntoView();",
+              "err": {},
+              "uuid": "6a423954-e868-40ee-ba47-50c50a3686eb",
+              "parentUUID": "51ea49ff-b576-4d22-b04e-20e6e0b87f69",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6a423954-e868-40ee-ba47-50c50a3686eb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12942,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportdir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

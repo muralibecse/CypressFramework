@@ -2,7 +2,17 @@
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 20000,
   "reporter":"mochawesome",
-  "env": {
+  "reporterOptions":{
+    "reportdir":"cypress/reports",
+    "reportFilename":"report",
+    "overwrite":true,
+    "html":true,
+    "json": true,
+    "charts":true,
+    "timestamp":"mmddyyyy_HHMMss" 
+  },
+    "video":true,
+    "env": {
     "url": "https://rahulshettyacademy.com/angularpractice/"
   },
   "projectId": "kbwsh8"

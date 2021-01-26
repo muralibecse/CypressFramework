@@ -1,5 +1,9 @@
 import BasePage from "../PageObjects/BasePage"
 class AmazonHomePage {
+
+    constructor(){
+
+    }
    
     visitAmazonHomePage(url){{
         return cy.visit(url);

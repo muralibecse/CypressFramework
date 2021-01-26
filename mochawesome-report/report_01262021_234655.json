@@ -1,0 +1,165 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-01-26T18:16:53.959Z",
+    "end": "2021-01-26T18:16:55.903Z",
+    "duration": 1944,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "91245b74-80b1-41fe-b8ac-a7b516175c57",
+      "title": "",
+      "fullFile": "cypress\\integration\\DemoSpecs\\SampleAPITestCases.spec.js",
+      "file": "cypress\\integration\\DemoSpecs\\SampleAPITestCases.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ac5df307-7a6c-4eb9-aca8-a6080ec790b8",
+          "title": "API testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET API",
+              "fullTitle": "API testing GET API",
+              "timedOut": null,
+              "duration": 319,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request(\"https://reqres.in/api/users?page=2\").then(function (response) {\n  expect(response).to.have.property('status', 200);\n  expect(response.body.data[0]).has.property('email', 'michael.lawson@reqres.in');\n  expect(response.body.data).has.length(6);\n  expect(response.body).has.property('per_page', 6);\n});",
+              "err": {},
+              "uuid": "8e102b5d-f449-421e-b61f-6fac31c09f61",
+              "parentUUID": "ac5df307-7a6c-4eb9-aca8-a6080ec790b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST API",
+              "fullTitle": "API testing POST API",
+              "timedOut": null,
+              "duration": 515,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var item = {\n  \"name\": \"morpheus\",\n  \"job\": \"leader\"\n};\ncy.request('POST', 'https://reqres.in/api/users', item).then(function (response) {\n  expect(response).to.have.property('status', 201);\n});",
+              "err": {},
+              "uuid": "a802211e-a0ed-4b64-a974-b0da9f2ae1c7",
+              "parentUUID": "ac5df307-7a6c-4eb9-aca8-a6080ec790b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "UPDATE API",
+              "fullTitle": "API testing UPDATE API",
+              "timedOut": null,
+              "duration": 511,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var item = {\n  \"name\": \"morpheusnew\",\n  \"job\": \"leadernew\"\n};\ncy.request('PUT', 'https://reqres.in/api/users/2', item).then(function (response) {\n  expect(response).to.have.property('status', 200);\n});",
+              "err": {},
+              "uuid": "649e9ab3-ddb5-47b9-a627-41df80d32beb",
+              "parentUUID": "ac5df307-7a6c-4eb9-aca8-a6080ec790b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "DELETE API",
+              "fullTitle": "API testing DELETE API",
+              "timedOut": null,
+              "duration": 499,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var item = {\n  \"name\": \"morpheus\",\n  \"job\": \"leader\"\n};\ncy.request('DELETE', 'https://reqres.in/api/users/2', item).then(function (response) {\n  expect(response).to.have.property('status', 204);\n});",
+              "err": {},
+              "uuid": "d711fee5-2fb2-461e-94ec-7ca22dbc7821",
+              "parentUUID": "ac5df307-7a6c-4eb9-aca8-a6080ec790b8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8e102b5d-f449-421e-b61f-6fac31c09f61",
+            "a802211e-a0ed-4b64-a974-b0da9f2ae1c7",
+            "649e9ab3-ddb5-47b9-a627-41df80d32beb",
+            "d711fee5-2fb2-461e-94ec-7ca22dbc7821"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1844,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportdir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
